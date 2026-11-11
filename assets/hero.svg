@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="Halograph Skills. Teach any AI agent to use your memory.">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b0d10"/><stop offset="1" stop-color="#141a12"/></linearGradient>
+<pattern id="d" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.2" fill="#fff" opacity=".06"/></pattern>
+<radialGradient id="r" cx=".85" cy=".2" r=".6"><stop offset="0" stop-color="#a3b84a" stop-opacity=".22"/><stop offset="1" stop-color="#a3b84a" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="340" rx="24" fill="url(#g)"/><rect width="1200" height="340" rx="24" fill="url(#d)"/><rect width="1200" height="340" rx="24" fill="url(#r)"/>
+<text x="64" y="88" fill="#7d8590" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="18" letter-spacing="2">AGENT SKILL · MCP</text>
+<text x="60" y="170" fill="#f0f3f6" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="72" font-weight="700" letter-spacing="-2">Halograph Skills</text>
+<text x="64" y="222" fill="#c9d1d9" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="28" font-weight="500">Teach any AI agent to use your memory. Fast, structured, safe.</text>
+<text x="64" y="288" fill="#a3b84a" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17">Claude · ChatGPT · Codex · Cursor · Grok · any MCP client</text>
+</svg>

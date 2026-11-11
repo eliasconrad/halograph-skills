@@ -1,6 +1,15 @@
-# Halograph Skills
+<img src="./assets/hero.svg" width="100%" alt="Halograph Skills. Teach any AI agent to use your memory.">
+<img src="./assets/ask.svg" width="100%" alt="Example questions and the tool the agent picks">
 
-**Ein Skill, damit Claude, ChatGPT/Codex, Cursor und Grok dein Halograph-Gedächtnis richtig benutzen: schnell, geordnet und sicher.**
+**Ein Skill, damit Claude, ChatGPT/Codex, Cursor und Grok dein Halograph-Gedächtnis richtig benutzen: schnell, geordnet und sicher.** Einmal verbinden, Skill einbinden, und deine KI kennt dich ab der ersten Nachricht.
+
+<img src="./assets/platforms.svg" width="100%" alt="Works with Claude, ChatGPT, Codex, Cursor and Grok">
+
+## So funktioniert es
+
+<img src="./assets/flow.svg" width="100%" alt="Your sources flow into Halograph, served over MCP to your agent">
+
+Halograph sammelt deine Quellen und ordnet sie wie eine Bücherei. Über **MCP** greift deine KI darauf zu. Der **Skill** bringt ihr bei, dabei den schnellsten Weg zu nehmen: einmal `about_me`, dann `agenda` für Termine, `browse` für Themen und Personen, `search_context` für Details, `read_note` für den ganzen Text.
 
 ---
 
