@@ -1,92 +1,92 @@
 <img src="./assets/hero.svg" width="100%" alt="Halograph Skills. Teach any AI agent to use your memory.">
 <img src="./assets/ask.svg" width="100%" alt="Example questions and the tool the agent picks">
 
-**Ein Skill, damit Claude, ChatGPT/Codex, Cursor und Grok dein Halograph-Gedächtnis richtig benutzen: schnell, geordnet und sicher.** Einmal verbinden, Skill einbinden, und deine KI kennt dich ab der ersten Nachricht.
+**One skill that teaches Claude, ChatGPT/Codex, Cursor and Grok to use your Halograph memory properly: fast, structured and safe.** Connect once, add the skill, and your AI knows you from the first message.
 
 <img src="./assets/platforms.svg" width="100%" alt="Works with Claude, ChatGPT, Codex, Cursor and Grok">
 
-## So funktioniert es
+## How it works
 
 <img src="./assets/flow.svg" width="100%" alt="Your sources flow into Halograph, served over MCP to your agent">
 
-Halograph sammelt deine Quellen und ordnet sie wie eine Bücherei. Über **MCP** greift deine KI darauf zu. Der **Skill** bringt ihr bei, dabei den schnellsten Weg zu nehmen: einmal `about_me`, dann `agenda` für Termine, `browse` für Themen und Personen, `search_context` für Details, `read_note` für den ganzen Text.
+Halograph collects your sources and organizes them like a library. Your AI reaches them over **MCP**. The **skill** teaches it to take the fastest path every time: `about_me` once, then `agenda` for dates, `browse` for topics and people, `search_context` for details, `read_note` for the full text.
 
 ---
 
-## Was ist Halograph?
+## What is Halograph?
 
-Halograph ist ein persönliches Gedächtnis für KI-Agenten. Es sammelt automatisch, was du sonst überall verstreut hast:
+[Halograph](https://halograph.app) is a personal memory for AI agents. It automatically collects what is otherwise scattered everywhere:
 
-| Bereich | Quellen |
+| Area | Sources |
 |---|---|
-| Mail | Gmail, Outlook / Microsoft 365, Apple Mail (mit vollem Text) |
-| Nachrichten | iMessage, WhatsApp- und Telegram-Exporte |
-| Meetings | Granola (mit Transkript), Wispr Flow |
-| Diktate | Wispr Flow, FluidVoice: alles, was du sprichst, auch deine Prompts an andere KIs |
-| Notizen | Apple Notizen, eigene Erinnerungen |
-| Kalender | Apple, Google, Outlook, Kalender-Links |
-| Personen | Kontakte |
-| Arbeit | GitHub-Repos, Claude-Code-Sitzungen, claude.ai- und ChatGPT-Verläufe |
+| Mail | Gmail, Outlook / Microsoft 365, Apple Mail (full text) |
+| Messages | iMessage, WhatsApp and Telegram exports |
+| Meetings | Granola (with transcript), Wispr Flow |
+| Dictations | Wispr Flow, FluidVoice: everything you say, including your prompts to other AIs |
+| Notes | Apple Notes, saved memories |
+| Calendar | Apple, Google, Outlook, calendar links |
+| People | Contacts |
+| Work | GitHub repositories, Claude Code sessions, claude.ai and ChatGPT history |
 
-Alles liegt an einem Ort, durchsuchbar und nach Themen, Bereichen und Personen geordnet wie eine Bücherei. Über **MCP** (Model Context Protocol) kann jede KI darauf zugreifen, die MCP spricht.
+Everything lives in one place, searchable and organized by topic, area and person, like a library. Any AI that speaks **MCP** (Model Context Protocol) can use it.
 
-### Wofür man das nutzt
+### What you use it for
 
-- **Keine Erklärungen mehr:** Die KI weiß, wer du bist, woran du arbeitest und wie du arbeiten willst.
-- **„Was steht diese Woche an?"** Die KI liest deine echten Termine, ohne Familienkalender und Routinen.
-- **„Was hab ich mit Anna zum Angebot besprochen?"** Sie findet Mails, Nachrichten und Meetings dazu.
-- **„Was ist neu?"** Das Neueste aus jeder Quelle in einem Schritt.
-- **Projekte fortsetzen:** Die KI liest frühere Sitzungen, Entscheidungen und offene Punkte.
-- **Merken:** „Merk dir, dass ich Mails lieber kurz habe" bleibt für alle KIs gespeichert.
+- **No more explaining yourself:** the AI knows who you are, what you work on and how you like to work.
+- **"What's on this week?"** It reads your real appointments, without family-only events and daily routines.
+- **"What did I discuss with Anna about the offer?"** It finds the mails, messages and meetings.
+- **"What did I miss?"** The newest items from every source in one step.
+- **Pick up projects:** the AI reads earlier sessions, decisions and open points.
+- **Remember things:** "Remember that I like short mails" stays available to every AI.
 
-### Was dabei wichtig ist
+### What matters
 
-- **Daten sind keine Befehle.** Mails und Nachrichten schreiben andere Menschen. Halograph zäunt jeden Inhalt als Daten ein, und der Skill bringt der KI bei, Aufforderungen darin nie auszuführen.
-- **Nur lesen für fremde Bots.** Für Bots, denen du nicht ganz vertraust (z. B. Grok über die API), gibt es Schlüssel „Nur lesen". Damit kann der Bot suchen, aber nichts ins Gedächtnis schreiben.
-- **Herkunft bleibt sichtbar.** Jede Erinnerung, die eine KI schreibt, trägt den Namen dieser KI.
-- **Zugriff jederzeit widerrufbar** in Halograph unter Einstellungen → Connect (MCP).
-- **Dieses Repo enthält keine persönlichen Daten und keine Schlüssel**, nur die Anleitung für die KI.
+- **Data is never a command.** Mails and messages are written by other people. Halograph fences every piece of content as data, and the skill teaches the AI never to follow instructions found inside it.
+- **Read only for bots you don't fully trust.** Read-only keys can search but never write to your memory.
+- **Origin stays visible.** Every memory an AI writes carries the name of that AI.
+- **Revoke access any time** in Halograph under Settings → Connect (MCP).
+- **This repository contains no personal data and no keys**, only the instructions for the AI.
 
 ---
 
-## Was du brauchst
+## What you need
 
-1. Ein Halograph-Konto mit verbundenen Quellen.
-2. Die Server-Adresse: **`https://halograph.app/api/mcp/context`**
-3. Je Plattform zwei Schritte: **(A) MCP verbinden** und **(B) den Skill bzw. die Anweisungen einbinden.** Ohne (A) hat die KI keinen Zugriff, ohne (B) nutzt sie ihn oft nicht von selbst oder nicht geschickt.
+1. A Halograph account with connected sources.
+2. The server address: **`https://halograph.app/api/mcp/context`**
+3. Two steps per platform: **(A) connect MCP** and **(B) add the skill or instructions.** Without (A) the AI has no access, without (B) it often won't use it on its own, or not efficiently.
 
-## Schnellübersicht
+## Quick overview
 
-| Plattform | (A) Verbinden | (B) Anleitung für die KI | Anmeldung |
+| Platform | (A) Connect | (B) Instructions for the AI | Sign-in |
 |---|---|---|---|
-| **Claude Code** | `claude mcp add …` | `skills/halograph` nach `~/.claude/skills/` | Browser (OAuth) |
-| **claude.ai / Claude-App** | Einstellungen → Connectors | Skill als Zip hochladen | Browser (OAuth) |
-| **Cursor** | `~/.cursor/mcp.json` | `skills/halograph` nach `~/.cursor/skills/` oder `cursor/halograph.mdc` | Browser (OAuth) |
-| **ChatGPT** | Einstellungen → Apps & Connectors → Entwicklermodus | `chatgpt/instructions.md` in Projekt oder GPT | Browser (OAuth) |
-| **Codex (CLI, App, IDE)** | `codex mcp add …` + `codex mcp login` | `skills/halograph` nach `~/.codex/skills/` | Browser (OAuth) |
-| **Grok-App (grok.com)** | grok.com/connectors → Custom | `grok/system-prompt.md` in Projekt-Anweisungen | Browser (OAuth) |
-| **Grok über xAI-API (eigener Bot)** | `tools: [{type:"mcp", …}]` | `grok/system-prompt.md` als `instructions` | Schlüssel „Nur lesen" |
+| **Claude Code** | `claude mcp add …` | copy `skills/halograph` to `~/.claude/skills/` | browser (OAuth) |
+| **claude.ai / Claude app** | Settings → Connectors | upload the skill as a zip | browser (OAuth) |
+| **Cursor** | `~/.cursor/mcp.json` | `skills/halograph` to `~/.cursor/skills/` or `cursor/halograph.mdc` | browser (OAuth) |
+| **ChatGPT** | Settings → Apps & Connectors → Developer mode | `chatgpt/instructions.md` in a project or GPT | browser (OAuth) |
+| **Codex (CLI, app, IDE)** | `codex mcp add …` + `codex mcp login` | `skills/halograph` to `~/.codex/skills/` | browser (OAuth) |
+| **Grok app (grok.com)** | grok.com/connectors → Custom | `grok/system-prompt.md` in project instructions | browser (OAuth) |
+| **Grok via the xAI API (your own bot)** | `tools: [{type:"mcp", …}]` | `grok/system-prompt.md` as `instructions` | read-only key |
 
-Den Skill holst du einmal:
+Get the skill once:
 
 ```bash
 git clone https://github.com/eliasconrad/halograph-skills.git
 cd halograph-skills
 ```
 
-Nach jedem Schritt **die App bzw. Sitzung neu starten**, denn Werkzeuge und Skills werden beim Start gelesen.
+After each step, **restart the app or session**: tools and skills are loaded at start.
 
 ---
 
 ## Claude Code
 
-**(A) Verbinden**
+**(A) Connect**
 
 ```bash
 claude mcp add --transport http --scope user halograph https://halograph.app/api/mcp/context
 ```
 
-Dann in Claude Code `/mcp` → `halograph` → **Authenticate** → im Browser **Erlauben**.
+Then run `/mcp` in Claude Code → `halograph` → **Authenticate** → **Allow** in the browser.
 
 **(B) Skill**
 
@@ -94,11 +94,11 @@ Dann in Claude Code `/mcp` → `halograph` → **Authenticate** → im Browser *
 mkdir -p ~/.claude/skills && cp -r skills/halograph ~/.claude/skills/
 ```
 
-**Prüfen:** neue Sitzung, ohne Halograph zu erwähnen: „Was steht bei mir diese Woche an?" → Claude ruft `agenda` auf.
+**Check:** in a new session, without mentioning Halograph, ask "What's on my calendar this week?" → Claude calls `agenda`.
 
-## claude.ai und Claude-App (Mac, Windows, iPhone)
+## claude.ai and the Claude app (Mac, Windows, iPhone)
 
-**(A) Verbinden:** Einstellungen → **Connectors** → **Benutzerdefinierten Connector hinzufügen** → Name `Halograph`, URL `https://halograph.app/api/mcp/context` → **Verbinden** → **Erlauben**.
+**(A) Connect:** Settings → **Connectors** → **Add custom connector** → name `Halograph`, URL `https://halograph.app/api/mcp/context` → **Connect** → **Allow**.
 
 **(B) Skill:**
 
@@ -106,44 +106,44 @@ mkdir -p ~/.claude/skills && cp -r skills/halograph ~/.claude/skills/
 cd skills && zip -r halograph.zip halograph
 ```
 
-Einstellungen → **Funktionen** → **Skills** → **Skill hochladen** → `halograph.zip`.
+Settings → **Capabilities** → **Skills** → **Upload skill** → `halograph.zip`.
 
-**Tipp:** Unter Einstellungen → Profil → Persönliche Präferenzen eintragen: *„Nutze Halograph, wenn es um mich, meine Projekte, Leute oder Termine geht. Ruf in neuen Gesprächen zuerst about_me auf."*
+**Tip:** under Settings → Profile → Personal preferences add: *"Use Halograph whenever a question is about me, my projects, people or appointments. Call about_me first in new conversations."*
 
 ## Cursor
 
-**(A) Verbinden:** in `~/.cursor/mcp.json` ergänzen:
+**(A) Connect:** add to `~/.cursor/mcp.json`:
 
 ```json
 { "mcpServers": { "halograph": { "url": "https://halograph.app/api/mcp/context" } } }
 ```
 
-Cursor neu starten → Settings → **MCP** → bei halograph **Needs login** klicken → **Erlauben**.
+Restart Cursor → Settings → **MCP** → click **Needs login** next to halograph → **Allow**.
 
-**(B) Skill oder Regel** (eins von beiden):
+**(B) Skill or rule** (either one):
 
 ```bash
-mkdir -p ~/.cursor/skills && cp -r skills/halograph ~/.cursor/skills/      # Skill
-mkdir -p ~/.cursor/rules  && cp cursor/halograph.mdc ~/.cursor/rules/      # Regel
+mkdir -p ~/.cursor/skills && cp -r skills/halograph ~/.cursor/skills/      # skill
+mkdir -p ~/.cursor/rules  && cp cursor/halograph.mdc ~/.cursor/rules/      # rule
 ```
 
 ## ChatGPT
 
-Eigene MCP-Server gibt es in ChatGPT über den **Entwicklermodus** (bezahlte Pläne; in Business/Enterprise muss ein Admin eigene Connectors erlauben).
+Custom MCP servers are available in ChatGPT through **Developer mode** (paid plans; on Business/Enterprise an admin has to allow custom connectors).
 
-**(A) Verbinden:** Einstellungen → **Apps & Connectors** → **Erweitert** → **Entwicklermodus** einschalten → **Erstellen** → Name `Halograph`, URL `https://halograph.app/api/mcp/context`, Anmeldung **OAuth** → **Erlauben**. Im Chat dann über das Werkzeug-Menü Halograph einschalten.
+**(A) Connect:** Settings → **Apps & Connectors** → **Advanced** → turn on **Developer mode** → **Create** → name `Halograph`, URL `https://halograph.app/api/mcp/context`, authentication **OAuth** → **Allow**. In a chat, enable Halograph from the tools menu.
 
-**(B) Anweisungen:** Inhalt von `chatgpt/instructions.md` in ein **Projekt** (Projekt-Anweisungen) oder ein eigenes **GPT** (Anweisungen) kopieren. Für alle Chats: Einstellungen → Personalisierung → Benutzerdefinierte Anweisungen (Kurzfassung oben in der Datei).
+**(B) Instructions:** paste `chatgpt/instructions.md` into a **Project** (project instructions) or a custom **GPT** (instructions). For every chat: Settings → Personalization → Custom instructions (use the short version at the top of the file).
 
-## Codex (CLI, Codex-App, IDE-Erweiterung)
+## Codex (CLI, Codex app, IDE extension)
 
-Codex nutzt dieselbe Konfiguration in CLI, App und IDE.
+Codex shares one configuration across CLI, app and IDE.
 
-**(A) Verbinden**
+**(A) Connect**
 
 ```bash
 codex mcp add halograph --url https://halograph.app/api/mcp/context
-codex mcp login halograph      # öffnet den Browser → Erlauben
+codex mcp login halograph      # opens the browser → Allow
 ```
 
 **(B) Skill**
@@ -152,62 +152,63 @@ codex mcp login halograph      # öffnet den Browser → Erlauben
 mkdir -p ~/.codex/skills && cp -r skills/halograph ~/.codex/skills/
 ```
 
-Codex lädt Skills beim Start. Aufrufen mit `$halograph` oder einfach eine Frage stellen. Alternativ den Abschnitt aus `codex/AGENTS.md` in `~/.codex/AGENTS.md` übernehmen.
+Codex loads skills at start. Invoke it with `$halograph` or just ask a question. Alternatively copy the section from `codex/AGENTS.md` into `~/.codex/AGENTS.md`.
 
 ## Grok
 
-### Grok-App (grok.com, auch für einen Grok-Bot in einem Projekt)
+### Grok app (grok.com, also for a Grok bot inside a project)
 
-**(A) Verbinden:** [grok.com/connectors](https://grok.com/connectors) → **New Connector** → **Custom** → URL `https://halograph.app/api/mcp/context` → anmelden → **Erlauben**. Bezahlter Plan nötig; in Grok Business richtet ein Admin den Connector ein.
+**(A) Connect:** [grok.com/connectors](https://grok.com/connectors) → **New Connector** → **Custom** → URL `https://halograph.app/api/mcp/context` → sign in → **Allow**. Requires a paid plan; on Grok Business an admin sets up the connector.
 
-**(B) Anweisungen:** den Abschnitt „System prompt" aus `grok/system-prompt.md` in die **Projekt-Anweisungen** deines Bots kopieren (vor oder nach deinen eigenen Anweisungen).
+**(B) Instructions:** copy the "System prompt" section from `grok/system-prompt.md` into your bot's **project instructions**.
 
-### Eigener Bot über die xAI-API
+### Your own bot via the xAI API
 
-Ein Bot ohne Browser braucht einen Schlüssel: in Halograph → Einstellungen → Connect (MCP) → **Nur lesen**. Den Schlüssel in einen Secret-Speicher legen, nie in Code. Aufruf siehe `grok/system-prompt.md`.
+A bot without a browser needs a key: in Halograph → Settings → Connect (MCP) → **Read only**. Keep the key in a secret store, never in code. See `grok/system-prompt.md` for the request.
 
 ---
 
-## Funktioniert es?
+## Does it work?
 
-Drei Fragen, ohne Halograph zu erwähnen:
+Three questions, without mentioning Halograph:
 
-| Frage | Das sollte die KI tun |
+| Question | What the AI should do |
 |---|---|
-| „Was steht bei mir diese Woche an?" | `agenda` |
-| „Was gibt es Neues zu Projekt X?" | `library` → `browse topic=X` |
-| „Was hat Anna zuletzt geschrieben?" | `browse person=Anna` → `read_note` |
+| "What's on my calendar this week?" | `agenda` |
+| "What's new on project X?" | `library` → `browse topic=X` |
+| "What did Anna write me last?" | `browse person=Anna` → `read_note` |
 
-Wenn die KI nichts aufruft: Ist (A) verbunden (grüner Punkt / „connected")? Ist (B) eingebunden? Sitzung neu gestartet?
+If the AI calls nothing: is (A) connected (green dot / "connected")? Is (B) added? Did you restart the session?
 
-## Die Werkzeuge
+## The tools
 
-| Werkzeug | Wofür | Nur lesen? |
+| Tool | What for | Read only? |
 |---|---|---|
-| `about_me` | Gesamtbild in einem Schritt (einmal pro Sitzung) | ja |
-| `library` | Katalog: Regale nach Thema, Bereich, Person | ja |
-| `browse` | Ein Regal aufschlagen (Thema, Bereich, Quelle, Person, Zeitraum) | ja |
-| `agenda` | Termine in einem Zeitraum, nach Tagen | ja |
-| `whats_new` | Neues aus allen Quellen | ja |
-| `search_context` | Freie Suche über alle Quellen | ja |
-| `search_library` | Nur Notizen, Erinnerungen, frühere Sitzungen | ja |
-| `read_note` | Einen Eintrag ganz lesen | ja |
-| `remember` | Etwas Dauerhaftes merken | nein |
-| `log_conversation` | Eine Sitzung festhalten | nein |
-| `send_update` | Eine Nachricht an dich in der App | nein |
+| `about_me` | The full picture in one step (once per session) | yes |
+| `library` | Catalog: shelves by topic, area and person | yes |
+| `browse` | Open one shelf (topic, area, source, person, time range) | yes |
+| `agenda` | Appointments in a date range, grouped by day | yes |
+| `whats_new` | What's new across all sources | yes |
+| `search_context` | Free search across all sources | yes |
+| `search_library` | Only notes, memories and past sessions | yes |
+| `read_note` | Read one entry in full | yes |
+| `remember` | Save something durable | no |
+| `log_conversation` | Log a session | no |
+| `send_update` | Send the user a message in the app | no |
 
-Wann welches Werkzeug am schnellsten ist, steht im Skill: [`skills/halograph/SKILL.md`](skills/halograph/SKILL.md).
+When each tool is fastest is described in the skill: [`skills/halograph/SKILL.md`](skills/halograph/SKILL.md).
 
-## Dateien in diesem Repo
+## Files in this repository
 
-| Datei | Für |
+| File | For |
 |---|---|
-| `skills/halograph/SKILL.md` | Claude Code, claude.ai, Cursor, Codex (Agent-Skills-Format) |
-| `cursor/halograph.mdc` | Cursor-Regel statt Skill |
-| `chatgpt/instructions.md` | ChatGPT (Projekt, GPT, Personalisierung) |
-| `codex/AGENTS.md` | Codex ohne Skills |
-| `grok/system-prompt.md` | Grok-App (Projekt) und xAI-API |
+| `skills/halograph/SKILL.md` | Claude Code, claude.ai, Cursor, Codex (Agent Skills format) |
+| `cursor/halograph.mdc` | Cursor rule instead of a skill |
+| `chatgpt/instructions.md` | ChatGPT (project, GPT, personalization) |
+| `codex/AGENTS.md` | Codex without skills |
+| `grok/system-prompt.md` | Grok app (project) and xAI API |
+| `tools/` | Scripts that build the graphics in `assets/` |
 
-## Lizenz
+## License
 
 MIT

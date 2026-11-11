@@ -1,11 +1,11 @@
-# Baut die Grafiken des Skill-Repos im Stil von halograph.app.  python3 tools/build_assets.py
+# Builds the graphics of this repo in the halograph.app style.  python3 tools/build_assets.py
 import json, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from style import *
 A = os.path.join(os.path.dirname(__file__), "..", "assets")
 si = json.load(open(sys.argv[1])) if len(sys.argv) > 1 else {}
 
-# Titelbild
+# Hero
 inner = sphere(960, 170, 150) + mark(64, 64, 34) + \
   f'<text x="112" y="88" fill="{MUTED}" font-family="{F}" font-size="17">halograph</text>' + \
   f'<text x="62" y="186" fill="{TEXT}" font-family="{F}" font-size="66" font-weight="600" letter-spacing="-2">Halograph Skills</text>' + \
@@ -13,12 +13,12 @@ inner = sphere(960, 170, 150) + mark(64, 64, 34) + \
   pill(64, 270, "Claude · ChatGPT · Codex · Cursor · Grok", pulse=False)
 open(f"{A}/hero.svg", "w").write(frame(1200, 340, inner, "Halograph Skills. Teach any AI agent to use your memory."))
 
-# Animierte Zeile: Frage -> Werkzeug
+# Animated line: question -> tool
 pairs = [("What's on this week?", "agenda"), ("Everything on project Atlas", "library → browse"), ("What did Anna write me?", "browse person → read_note"), ("What did I miss?", "whats_new"), ("Remember: I prefer short mails", "remember")]
 items = [f'<text x="64" y="31" fill="{TEXT}" font-family="{M}" font-size="16">“{q}”</text><text x="1136" y="31" fill="{MUTED}" font-family="{M}" font-size="16" text-anchor="end">→ {t}</text>' for q, t in pairs]
 open(f"{A}/ask.svg", "w").write(f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="48" viewBox="0 0 1200 48" role="img" aria-label="Example questions and the tool the agent picks">{cycle(items, 0, 0)}</svg>')
 
-# Plattform-Kacheln (einfarbig wie die Website)
+# Platform tiles (monochrome like the website)
 def logo(kind, x, y):
     if kind in si:
         return f'<g transform="translate({x},{y}) scale(1.4)"><path d="{si[kind]}" fill="{TEXT}"/></g>'
@@ -34,7 +34,7 @@ for i, (k, name, sub, how) in enumerate(tiles):
            f'<text x="{x+22}" y="166" fill="{DIM}" font-family="{M}" font-size="12">{how}</text>']
 open(f"{A}/platforms.svg", "w").write(f'<svg xmlns="http://www.w3.org/2000/svg" width="1164" height="200" viewBox="0 0 1164 200" role="img" aria-label="Works with Claude, ChatGPT, Codex, Cursor and Grok">{"".join(el)}</svg>')
 
-# Ablauf
+# Flow
 cols = [("Your sources", ["Mail · iMessage · meetings", "dictations · notes · calendar", "contacts · past sessions"]),
         ("Halograph", ["catalog, shelves, search", "read-only or read-write", "data fenced, never commands"]),
         ("MCP", ["one URL, OAuth", "or a read-only key", "about_me · library · browse"]),

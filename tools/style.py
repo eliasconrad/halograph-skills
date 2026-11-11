@@ -1,11 +1,11 @@
-# Gemeinsamer Stil der Grafiken: wie halograph.app (Schwarz, Punkt-Kugel, Weiß, keine Farbakzente).
+# Shared graphic style, matching halograph.app (black, dot sphere, white, no accent colors).
 import math
 BG = "#0a0a0a"; CARD = "#0f0f0f"; LINE = "#232323"; TEXT = "#ededed"; MUTED = "#8a8a8a"; DIM = "#5c5c5c"
 F = "-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',Inter,system-ui,sans-serif"
 M = "'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace"
 
 def sphere(cx, cy, r, n=420, tilt=0.42, spin=0.6, size=2.3, maxop=0.9):
-    """Kugel aus Punkten (Fibonacci), orthografisch projiziert. Vorn hell, hinten blass."""
+    """Sphere of dots (Fibonacci), orthographic projection. Bright in front, faint in the back."""
     out = []; ga = math.pi * (3 - math.sqrt(5))
     for i in range(n):
         y = 1 - (i / (n - 1)) * 2; rad = math.sqrt(1 - y * y); th = ga * i + spin
@@ -17,7 +17,7 @@ def sphere(cx, cy, r, n=420, tilt=0.42, spin=0.6, size=2.3, maxop=0.9):
     return "".join(out)
 
 def mark(x, y, s, fill=TEXT):
-    """Halograph-Zeichen (aus public/mark.svg), s = Kantenlänge in px."""
+    """Halograph mark (from public/mark.svg), s = size in px."""
     k = s / 800; g = []
     for a in range(0, 360, 60):
         g.append(f'<g transform="rotate({a} 512 512)"><rect x="362" y="202" width="300" height="140" rx="70" transform="rotate(-30 512 272)"/></g>')
