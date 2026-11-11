@@ -1,1 +1,3 @@
 tools/** linguist-vendored
+*.md linguist-detectable
+*.mdc linguist-detectable linguist-language=Markdown
