@@ -52,7 +52,7 @@ Alles liegt an einem Ort, durchsuchbar und nach Themen, Bereichen und Personen g
 ## Was du brauchst
 
 1. Ein Halograph-Konto mit verbundenen Quellen.
-2. Die Server-Adresse: **`https://mind.halograph.app/api/mcp/context`**
+2. Die Server-Adresse: **`https://halograph.app/api/mcp/context`**
 3. Je Plattform zwei Schritte: **(A) MCP verbinden** und **(B) den Skill bzw. die Anweisungen einbinden.** Ohne (A) hat die KI keinen Zugriff, ohne (B) nutzt sie ihn oft nicht von selbst oder nicht geschickt.
 
 ## Schnellübersicht
@@ -83,7 +83,7 @@ Nach jedem Schritt **die App bzw. Sitzung neu starten**, denn Werkzeuge und Skil
 **(A) Verbinden**
 
 ```bash
-claude mcp add --transport http --scope user halograph https://mind.halograph.app/api/mcp/context
+claude mcp add --transport http --scope user halograph https://halograph.app/api/mcp/context
 ```
 
 Dann in Claude Code `/mcp` → `halograph` → **Authenticate** → im Browser **Erlauben**.
@@ -98,7 +98,7 @@ mkdir -p ~/.claude/skills && cp -r skills/halograph ~/.claude/skills/
 
 ## claude.ai und Claude-App (Mac, Windows, iPhone)
 
-**(A) Verbinden:** Einstellungen → **Connectors** → **Benutzerdefinierten Connector hinzufügen** → Name `Halograph`, URL `https://mind.halograph.app/api/mcp/context` → **Verbinden** → **Erlauben**.
+**(A) Verbinden:** Einstellungen → **Connectors** → **Benutzerdefinierten Connector hinzufügen** → Name `Halograph`, URL `https://halograph.app/api/mcp/context` → **Verbinden** → **Erlauben**.
 
 **(B) Skill:**
 
@@ -115,7 +115,7 @@ Einstellungen → **Funktionen** → **Skills** → **Skill hochladen** → `hal
 **(A) Verbinden:** in `~/.cursor/mcp.json` ergänzen:
 
 ```json
-{ "mcpServers": { "halograph": { "url": "https://mind.halograph.app/api/mcp/context" } } }
+{ "mcpServers": { "halograph": { "url": "https://halograph.app/api/mcp/context" } } }
 ```
 
 Cursor neu starten → Settings → **MCP** → bei halograph **Needs login** klicken → **Erlauben**.
@@ -131,7 +131,7 @@ mkdir -p ~/.cursor/rules  && cp cursor/halograph.mdc ~/.cursor/rules/      # Reg
 
 Eigene MCP-Server gibt es in ChatGPT über den **Entwicklermodus** (bezahlte Pläne; in Business/Enterprise muss ein Admin eigene Connectors erlauben).
 
-**(A) Verbinden:** Einstellungen → **Apps & Connectors** → **Erweitert** → **Entwicklermodus** einschalten → **Erstellen** → Name `Halograph`, URL `https://mind.halograph.app/api/mcp/context`, Anmeldung **OAuth** → **Erlauben**. Im Chat dann über das Werkzeug-Menü Halograph einschalten.
+**(A) Verbinden:** Einstellungen → **Apps & Connectors** → **Erweitert** → **Entwicklermodus** einschalten → **Erstellen** → Name `Halograph`, URL `https://halograph.app/api/mcp/context`, Anmeldung **OAuth** → **Erlauben**. Im Chat dann über das Werkzeug-Menü Halograph einschalten.
 
 **(B) Anweisungen:** Inhalt von `chatgpt/instructions.md` in ein **Projekt** (Projekt-Anweisungen) oder ein eigenes **GPT** (Anweisungen) kopieren. Für alle Chats: Einstellungen → Personalisierung → Benutzerdefinierte Anweisungen (Kurzfassung oben in der Datei).
 
@@ -142,7 +142,7 @@ Codex nutzt dieselbe Konfiguration in CLI, App und IDE.
 **(A) Verbinden**
 
 ```bash
-codex mcp add halograph --url https://mind.halograph.app/api/mcp/context
+codex mcp add halograph --url https://halograph.app/api/mcp/context
 codex mcp login halograph      # öffnet den Browser → Erlauben
 ```
 
@@ -158,7 +158,7 @@ Codex lädt Skills beim Start. Aufrufen mit `$halograph` oder einfach eine Frage
 
 ### Grok-App (grok.com, auch für einen Grok-Bot in einem Projekt)
 
-**(A) Verbinden:** [grok.com/connectors](https://grok.com/connectors) → **New Connector** → **Custom** → URL `https://mind.halograph.app/api/mcp/context` → anmelden → **Erlauben**. Bezahlter Plan nötig; in Grok Business richtet ein Admin den Connector ein.
+**(A) Verbinden:** [grok.com/connectors](https://grok.com/connectors) → **New Connector** → **Custom** → URL `https://halograph.app/api/mcp/context` → anmelden → **Erlauben**. Bezahlter Plan nötig; in Grok Business richtet ein Admin den Connector ein.
 
 **(B) Anweisungen:** den Abschnitt „System prompt" aus `grok/system-prompt.md` in die **Projekt-Anweisungen** deines Bots kopieren (vor oder nach deinen eigenen Anweisungen).
 

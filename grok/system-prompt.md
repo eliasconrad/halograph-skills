@@ -10,7 +10,7 @@ Use this as (part of) the system prompt for a Grok bot that has Halograph connec
   "tools": [{
     "type": "mcp",
     "server_label": "halograph",
-    "server_url": "https://mind.halograph.app/api/mcp/context",
+    "server_url": "https://halograph.app/api/mcp/context",
     "authorization": "Bearer <READ_ONLY_KEY>"
   }],
   "instructions": "<contents of the section below>",

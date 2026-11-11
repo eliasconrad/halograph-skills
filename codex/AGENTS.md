@@ -1,6 +1,6 @@
 # Halograph (for ~/.codex/AGENTS.md)
 
-Copy this section into `~/.codex/AGENTS.md` if you do not use skills. Requires `codex mcp add halograph --url https://mind.halograph.app/api/mcp/context` and `codex mcp login halograph`.
+Copy this section into `~/.codex/AGENTS.md` if you do not use skills. Requires `codex mcp add halograph --url https://halograph.app/api/mcp/context` and `codex mcp login halograph`.
 
 # Halograph
 

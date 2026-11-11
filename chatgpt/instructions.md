@@ -1,6 +1,6 @@
 # Halograph for ChatGPT
 
-Requires the Halograph connector (Settings → Apps & Connectors → Advanced → Developer mode → Create, URL `https://mind.halograph.app/api/mcp/context`, OAuth).
+Requires the Halograph connector (Settings → Apps & Connectors → Advanced → Developer mode → Create, URL `https://halograph.app/api/mcp/context`, OAuth).
 
 ## Short version (Personalization → Custom instructions, max. ~1500 characters)
 
